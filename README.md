@@ -4,61 +4,100 @@
 
 ### Connect instantly. No saving numbers.
 
-A simple, modern way to connect through phone calls, WhatsApp, and Telegram — without saving contacts.
+Connect through phone calls, WhatsApp, and Telegram without saving contacts.
 
-<br>
+<a href="screenshots/screenshot1.jpg"><img src="screenshots/screenshot1.jpg" alt="Connectly Main Preview" width="100%"></a>
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![JSON](https://img.shields.io/badge/Data-JSON-5E8C61?style=for-the-badge&logo=json&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-<br>
-
-[Features](#-features) ·
-[Installation](#-installation) ·
-[Usage](#-usage) ·
-[Project Structure](#-project-structure) ·
-[Author](#-author)
+[Features](#-features) · [Screenshots](#-screenshots) · [Installation](#-installation) · [Usage](#-usage) · [Project Structure](#-project-structure) · [License](#-license)
 
 </div>
 
 ---
 
+## 📑 Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Tech Stack](#-tech-stack)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Privacy](#-privacy)
+- [Author](#-author)
+- [License](#-license)
+
+## 🔗 About
+
+Connectly is a lightweight, responsive web application for opening phone calls, WhatsApp conversations, and Telegram profiles. It helps users connect without saving phone numbers to their contacts.
+
 ## ✨ Features
 
-| Feature | Description |
-|---|---|
-| 🌍 **Country Search** | Search countries by name, ISO code, or international calling code. |
-| 🏳️ **Country Flags** | Display the selected country's flag and calling code. |
-| 📞 **Direct Calling** | Generate a phone link using the selected international calling code. |
-| 💬 **WhatsApp** | Open a WhatsApp conversation without saving the contact first. |
-| ✈️ **Telegram** | Open a Telegram profile using its username. |
-| 🔎 **Input Validation** | Validate phone numbers and Telegram usernames before continuing. |
-| 📱 **Responsive UI** | Use the interface on mobile devices and desktop browsers. |
-| 📂 **JSON Dataset** | Load country information from a local JSON file. |
+- 🌍 Search countries by name, ISO code, or calling code.
+- 🏳️ Display country flags and international dial codes.
+- 📞 Generate direct phone-call links.
+- 💬 Open WhatsApp conversations.
+- ✈️ Open Telegram profiles by username.
+- 🔎 Validate phone numbers and usernames.
+- 📱 Responsive mobile and desktop interface.
+- 📂 Load country information from JSON.
 
-## 🖥️ Preview
+## 📸 Screenshots
 
-The interface includes:
-
-- A clean navigation header and introductory section.
-- A phone and WhatsApp lookup card.
-- A searchable international country selector.
-- A Telegram username lookup card.
-- A features section and footer.
-
-> Screenshots can be added here after capturing the finished application.
+<table>
+<tr>
+<td width="50%" align="center">
+<strong>Screenshot 1 — Main Preview</strong><br><br>
+<a href="screenshots/screenshot1.jpg"><img src="screenshots/screenshot1.jpg" alt="Main preview" width="100%"></a>
+</td>
+<td width="50%" align="center">
+<strong>Screenshot 2</strong><br><br>
+<a href="screenshots/screenshot2.jpg"><img src="screenshots/screenshot2.jpg" alt="Mobile interface" width="100%"></a>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<strong>Screenshot 3</strong><br><br>
+<a href="screenshots/screenshot3.jpg"><img src="screenshots/screenshot3.jpg" alt="Desktop interface" width="80%"></a>
+</td>
+</tr>
+</table>
 
 ## 🧰 Tech Stack
 
-- **HTML5** — page structure
-- **CSS3** — styling and responsive layout
-- **Vanilla JavaScript** — search, selection, validation, and link generation
-- **JSON** — country names, ISO codes, calling codes, and flags
-- **Python 3** — local development server
-- **Font Awesome** — interface icons
-- **DM Sans** — interface typography
+- HTML5 and CSS3
+- Vanilla JavaScript
+- JSON country dataset
+- Python 3 development server
+- Font Awesome icons
+- DM Sans typography
+
+## ⚙️ Installation
+
+Requirements: Python 3 and a modern web browser.
+
+```bash
+git clone https://github.com/pandeyujjwal975/connectly.git
+cd connectly
+python3 -m http.server 8080
+```
+
+Open http://127.0.0.1:8080 in your browser. Keep the terminal running while using the application. Press Ctrl+C to stop the server.
+
+## 🚀 Usage
+
+1. Open the country selector.
+2. Search and select a country.
+3. Enter the national phone number without repeating the country code.
+4. Click Show options and choose Call or WhatsApp.
+5. For Telegram, enter a username and click Open Telegram.
+
+External applications may be needed to complete these actions.
 
 ## 📁 Project Structure
 
@@ -67,142 +106,31 @@ connectly/
 ├── index.html
 ├── style.css
 ├── script.js
-├── build_countries.py
 ├── README.md
+├── LICENSE
+├── screenshots/
 └── data/
     └── countries.json
 ```
 
-| File | Purpose |
-|---|---|
-| `index.html` | Main website structure |
-| `style.css` | Layout, components, dropdown, and responsive styling |
-| `script.js` | Country search, selection, validation, and contact links |
-| `build_countries.py` | Generates the country JSON from the downloaded source dataset |
-| `data/countries.json` | Country names, ISO codes, calling codes, and flags |
+## 🔐 Privacy
 
-## ⚙️ Installation
-
-### Requirements
-
-- Python 3
-- A modern web browser
-- Internet access for externally hosted fonts, icons, and external contact services
-
-### 1. Open the project directory
-
-```bash
-cd ~/connectly
-```
-
-### 2. Start the local server
-
-```bash
-python3 -m http.server 8080
-```
-
-### 3. Open Connectly
-
-Visit this address in your browser:
-
-**http://127.0.0.1:8080**
-
-Keep the terminal open while using the local server. Press `Ctrl + C` to stop it.
-
-> Run the site through a local server instead of opening `index.html` directly, because JavaScript uses `fetch()` to load the JSON dataset.
-
-## 🚀 Usage
-
-### 📞 Phone & WhatsApp
-
-1. Open the country selector.
-2. Search by country name, ISO code, or calling code.
-3. Select a country from the results.
-4. Enter the phone number without repeating the country calling code.
-5. Click **Show options**.
-6. Choose **Call** or **WhatsApp**.
-
-### ✈️ Telegram
-
-1. Enter a Telegram username, with or without `@`.
-2. Click **Open Telegram**.
-3. Continue in the Telegram application or browser.
-
-The application opens a Telegram profile URL; it does not guarantee that a profile exists or is accessible.
-
-## 🌐 Country Dataset
-
-Country records are stored in `data/countries.json`.
-
-Example:
-
-```json
-{
-  "name": "India",
-  "iso2": "IN",
-  "dialCode": "+91",
-  "flag": "🇮🇳"
-}
-```
-
-The selector can use these fields to match country names, ISO codes, and calling codes.
-
-**Important data considerations:**
-
-- Multiple countries can share the same calling code.
-- Use ISO country codes to distinguish countries with shared calling codes.
-- The current third-party dataset contains 242 source entries before filtering. It may not cover every territory or special numbering-plan entry.
-- Verify and maintain the dataset before using it in production.
-
-## 🔐 Privacy & Security
-
-- Connectly is designed to generate contact links without requiring users to save phone numbers as contacts.
-- The `tel:` link opens a compatible calling application; it does not place a call automatically.
-- WhatsApp and Telegram links may send the user to external applications or websites.
-- External services apply their own privacy policies and data-handling practices.
-
-Avoid entering sensitive personal information into websites you do not trust.
-
-## 🛠️ Troubleshooting
-
-**Country list is empty**
-
-- Check that `data/countries.json` exists.
-- Confirm that the JSON contains valid records.
-- Run the site through the Python local server.
-- Check the browser console for loading errors.
-
-**Calling code is incorrect**
-
-- Select the correct country from the results.
-- Enter only the national phone number in the phone input.
-- Remember that some countries share calling codes.
-
-**Changes are not visible**
-
-- Refresh the page.
-- If necessary, perform a hard refresh to reload the latest CSS and JavaScript.
-
-## 🗺️ Roadmap
-
-- [ ] Verify and expand international country coverage.
-- [ ] Improve country search and keyboard accessibility.
-- [ ] Add a screenshot of the finished interface.
-- [ ] Test on different mobile and desktop browsers.
-- [ ] Prepare the project for public release.
+Connectly creates contact links without requiring users to save numbers. Calls and messaging are handled by external services, which apply their own privacy policies. The core frontend does not require a dedicated backend.
 
 ## 👨‍💻 Author
 
 **Ujjwal Pandey**
 
-[![GitHub](https://img.shields.io/badge/GitHub-pandeyujjwal975-181717?style=for-the-badge&logo=github)](https://github.com/pandeyujjwal975)
+[GitHub Profile](https://github.com/pandeyujjwal975)
+
+## 📄 License
+
+Distributed under the [MIT License](LICENSE).
 
 ---
 
 <div align="center">
 
-Made with care by **Ujjwal Pandey**
-
-🔗 **Connectly** — Simple connections, made easier.
+**Connectly** — Simple connections, made easier.
 
 </div>
