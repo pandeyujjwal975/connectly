@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F7F8F4">
+
+  <title>Connectly — Connect Instantly</title>
+  <meta name="description" content="Connect through calls, WhatsApp, or Telegram without saving a number.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="#" class="brand" aria-label="Connectly home">
+      <span class="brand-icon">
+        <i class="fa-solid fa-link"></i>
+      </span>
+      <span>connectly<span class="brand-dot">.</span></span>
+    </a>
+
+    <a
+      href="https://github.com/pandeyujjwal975"
+      class="github-link"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit GitHub"
+    >
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-badge">
+        <span class="status-dot"></span>
+        SIMPLE. PRIVATE. INSTANT.
+      </div>
+
+      <h1>
+        Connect <span>instantly.</span>
+      </h1>
+
+      <p>
+        No saving numbers. Just connect.
+      </p>
+    </section>
+
+    <section class="services" aria-label="Connect options">
+
+      <!-- Phone and WhatsApp -->
+      <article class="service-card phone-card">
+        <div class="card-header">
+          <div class="card-icon phone-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div>
+            <h2>Call or WhatsApp</h2>
+            <p>Connect using a mobile number.</p>
+          </div>
+        </div>
+
+        <form id="phoneForm" novalidate>
+
+          <div class="field-group country-selector">
+            <label for="countrySearch">Country or calling code</label>
+
+            <div class="country-search-box">
+              <span id="selectedFlag" class="selected-flag" aria-hidden="true">🌐</span>
+
+              <input
+                type="text"
+                id="countrySearch"
+                name="countrySearch"
+                placeholder="Search India, IN, +91..."
+                autocomplete="off"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded="false"
+                aria-controls="countryResults"
+                aria-describedby="countryError"
+                required
+              >
+
+              <button
+                type="button"
+                id="countryToggle"
+                class="country-toggle"
+                aria-label="Show country list"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div
+              id="countryResults"
+              class="country-results"
+              role="listbox"
+              aria-label="Country search results"
+              hidden
+            ></div>
+
+            <p
+              id="countryError"
+              class="error-message"
+              role="alert"
+              hidden
+            ></p>
+          </div>
+
+          <label for="phoneNumber">Mobile number</label>
+
+          <div class="input-box phone-number-box">
+            <span id="dialCodePreview" class="country-code">Select country</span>
+            <span class="separator"></span>
+
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Enter phone number"
+              inputmode="tel"
+              autocomplete="tel-national"
+              required
+              aria-describedby="phoneError"
+            >
+          </div>
+
+          <p
+            id="phoneError"
+            class="error-message"
+            role="alert"
+            hidden
+          ></p>
+
+          <button type="submit" class="primary-button">
+            Show options
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <div id="phoneResults" class="results" hidden>
+          <a id="callLink" href="#" class="result-button call-button">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call</span>
+            <i class="fa-solid fa-arrow-up-right-from-square result-arrow"></i>
+          </a>
+
+          <a
+            id="whatsappLink"
+            href="#"
+            class="result-button whatsapp-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+            <i class="fa-solid fa-arrow-up-right-from-square result-arrow"></i>
+          </a>
+
+          <button type="button" id="editPhoneButton" class="edit-button">
+            <i class="fa-solid fa-pen"></i>
+            Change number
+          </button>
+        </div>
+      </article>
+
+      <!-- Telegram username only -->
+      <article class="service-card telegram-card">
+        <div class="card-header">
+          <div class="card-icon telegram-icon">
+            <i class="fa-brands fa-telegram"></i>
+          </div>
+
+          <div>
+            <h2>Telegram</h2>
+            <p>Open a profile by username.</p>
+          </div>
+        </div>
+
+        <form id="telegramForm" novalidate>
+          <label for="telegramUsername">Telegram username</label>
+
+          <div class="input-box">
+            <span class="username-prefix">@</span>
+
+            <input
+              type="text"
+              id="telegramUsername"
+              name="telegramUsername"
+              placeholder="Enter username"
+              autocomplete="off"
+              maxlength="32"
+              required
+              aria-describedby="telegramUsernameError"
+            >
+          </div>
+
+          <p
+            id="telegramUsernameError"
+            class="error-message"
+            role="alert"
+            hidden
+          ></p>
+
+          <button type="submit" class="primary-button telegram-submit">
+            Open Telegram
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </button>
+        </form>
+
+        <div class="telegram-tip">
+          <i class="fa-regular fa-lightbulb"></i>
+          <p>Enter the username with or without @.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="features" aria-label="Features">
+      <div class="feature">
+        <span class="feature-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </span>
+        <div>
+          <h3>Instant access</h3>
+          <p>Connect in seconds.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </span>
+        <div>
+          <h3>Private by design</h3>
+          <p>No contact saving.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">
+          <i class="fa-solid fa-heart"></i>
+        </span>
+        <div>
+          <h3>Made simple</h3>
+          <p>Nothing complicated.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>
+      Made by
+      <a
+        href="https://github.com/pandeyujjwal975"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Ujjwal Pandey</a>
+    </span>
+
+    <a
+      href="https://github.com/pandeyujjwal975"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="footer-link"
+    >
+      <i class="fa-brands fa-github"></i>
+      GitHub
+    </a>
+  </footer>
+
+</body>
+</html>
