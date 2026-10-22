@@ -32,6 +32,12 @@ Connect through phone calls, WhatsApp, and Telegram without saving contacts.
 - [Author](#-author)
 - [License](#-license)
 
+## 🌐 Live Demo
+
+🚀 **Live on:** [pandeyujjwal975.github.io/connectly](https://pandeyujjwal975.github.io/connectly/)
+
+---
+
 ## 🔗 About
 
 Connectly is a lightweight, responsive web application for opening phone calls, WhatsApp conversations, and Telegram profiles. It helps users connect without saving phone numbers to their contacts.
